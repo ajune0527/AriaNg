@@ -343,7 +343,7 @@
                             <span class="asterisk">*</span>
                         </div>
                         <div class="setting-value col-sm-8">
-                            <input class="form-control" type="text" ng-placeholder="(setting.rpcHost ? setting.rpcHost + ':' + setting.rpcPort : '')" ng-model="setting.rpcAlias" ng-change="updateRpcSetting(setting, 'rpcAlias')"/>
+                            <input class="form-control" type="text" ng-placeholder="(setting.rpcHost ? setting.rpcHost + (setting.rpcPort ? ':' + setting.rpcPort : '') : '')" ng-model="setting.rpcAlias" ng-change="updateRpcSetting(setting, 'rpcAlias')"/>
                         </div>
                     </div>
                     <div class="row">

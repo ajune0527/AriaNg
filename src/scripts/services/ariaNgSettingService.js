@@ -486,8 +486,12 @@
                 var rpcHost = options.rpcHost;
                 var rpcPort = options.rpcPort;
                 var rpcInterface = options.rpcInterface;
+                var s = protocol + '://' + rpcHost
+                if (rpcPort) {
+                    s += ':' + rpcPort;
+                }
 
-                return protocol + '://' + rpcHost + ':' + rpcPort + '/' + rpcInterface;
+                return s + '/' + rpcInterface;
             },
             getCurrentRpcHttpMethod: function () {
                 return getOption('httpMethod');
